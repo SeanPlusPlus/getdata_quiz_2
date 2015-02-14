@@ -10,4 +10,5 @@
 # I know, I know ... this is an R class ... but it's just too tempting to solve this with 
 # a single line on shell scripting
 
-curl -s 'https://api.github.com/users/jtleek/repos'
+curl -s 'https://api.github.com/users/jtleek/repos' | \
+  jq -C '.[] | select(.name=="datasharing") | .created_at'

@@ -14,7 +14,7 @@ getData <- function() {
   # fetch and return
   fileUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fwksst8110.for"
   download.file(fileUrl, destfile = "./data/data.fwf", method = "curl")
-  data <- read.fwf("./data/data.fwf", widths=c(12, 7,4, 9,4, 9,4, 9,4), skip = 4)
+  data <- read.fwf("./data/data.fwf", widths=c(12, 7, 4, 9, 4, 9, 4, 9, 4), skip = 4)
   return(data)
 }
 
